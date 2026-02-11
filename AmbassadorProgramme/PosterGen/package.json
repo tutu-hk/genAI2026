@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Poster generation and Poe-powered improvement for Ambassador Programme",
   "scripts": {
-    "screenshot": "node screenshot-poster.js",
-    "better": "node genBetterPoster.js",
-    "better-jpg": "node genBetterPosterJpg.js"
+    "screenshot": "node scripts/screenshot-poster.js",
+    "screenshot-better": "node scripts/screenshot-better.js",
+    "screenshot-a4": "node scripts/screenshot-a4.js",
+    "better": "node scripts/genBetterPoster.js",
+    "better-jpg": "node scripts/genBetterPosterJpg.js"
   },
   "dependencies": {
     "openai": "^4.77.0",

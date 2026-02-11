@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent AI 101 in IDE – Workshop Poster</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f3460 100%);
+      color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .poster {
+      width: 100%;
+      max-width: 720px;
+      background: linear-gradient(180deg, #1e2a4a 0%, #111827 100%);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 4px solid #3b82f6;
+      position: relative;
+      overflow: hidden;
+    }
+    .poster::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+    }
+
+    .poster-header { margin-bottom: 1.5rem; }
+    .poster h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .poster .tagline {
+      margin: 0;
+      font-size: 1.05rem;
+      color: #93c5fd;
+      font-weight: 500;
+    }
+
+    .ide-badges {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .ide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      font-weight: 500;
+    }
+    .ide-badge img {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+    }
+    .ide-badge .trae-icon {
+      width: 22px;
+      height: 22px;
+      background: #000;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ide-badge .trae-icon svg { width: 16px; height: 16px; }
+
+    .abstract {
+      background: rgba(15, 23, 42, 0.8);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #3b82f6;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #cbd5e1;
+    }
+    .abstract strong { color: #e2e8f0; }
+
+    .speaker-card {
+      display: flex;
+      gap: 2.5rem;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      padding: 1.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 2rem;
+    }
+    .photo-wrap {
+      flex-shrink: 0;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0.75rem;
+      border-radius: 50%;
+      margin-top: 0.6rem;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .photo {
+      display: block;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3b82f6;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .details { flex: 1; min-width: 0; }
+    .details p { margin: 0.3rem 0; font-size: 0.95rem; line-height: 1.5; color: #cbd5e1; }
+    .speaker-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .audience {
+      margin-top: 0.75rem !important;
+      font-size: 0.85rem !important;
+      color: #64748b !important;
+      font-style: italic;
+    }
+
+    .when-card {
+      display: flex;
+      background: rgba(20, 30, 50, 0.6);
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+    .when-item {
+      flex: 1;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .when-separator {
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.1) 50%, rgba(255,255,255,0));
+    }
+    .when-item .icon { font-size: 2rem; }
+    .when-item label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.25rem; }
+    .when-item strong { display: block; font-size: 1.15rem; color: #fff; font-weight: 600; }
+
+    .ccl-container { text-align: center; margin-bottom: 2rem; }
+    .ccl-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(90deg, #059669, #10b981);
+      color: #fff;
+      padding: 0.6rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .sponsor-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 1.5rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .sponsor-bar span {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    .sponsor-bar .sponsor-name {
+      color: #34d399;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .sponsor-bar .tbc {
+      font-size: 0.75rem;
+      color: #64748b;
+      font-style: italic;
+    }
+    .sponsor-bar img {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+    }
+
+    .cta-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      background: rgba(255,255,255,0.02);
+      padding: 1.5rem;
+      border-radius: 20px;
+    }
+    .register-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .register-btn:hover { background: linear-gradient(135deg, #2563eb, #1d4ed8); transform: scale(1.02); }
+
+    .qr-container { text-align: center; flex-shrink: 0; }
+    .qr-img {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      background: #fff;
+      padding: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .qr-container span {
+      display: block;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .poster { padding: 1.5rem; }
+      .poster h1 { font-size: 1.6rem; }
+      .speaker-card { flex-direction: column; text-align: center; }
+      .photo-wrap { margin-top: 0; }
+      .when-card { flex-direction: column; }
+      .when-separator { width: 100%; height: 2px; background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.1) 50%, rgba(255,255,255,0)); }
+      .cta-section { flex-direction: column-reverse; gap: 1.5rem; }
+      .register-btn { width: 100%; padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <header class="poster-header">
+      <h1>Agent AI 101 in IDE</h1>
+      <p class="tagline">For university students and scholars</p>
+      <div class="ide-badges">
+        <span class="ide-badge">
+          <span class="trae-icon">
+            <!-- Trae logo inline SVG -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="5" width="20" height="14" rx="1" fill="#34d399"/>
+              <rect x="5" y="8" width="14" height="8" rx="0.5" fill="#000"/>
+              <path d="M10 12L8.5 10.5L10 9" stroke="#34d399" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 9L15.5 10.5L14 12" stroke="#34d399" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          Trae
+        </span>
+        <span style="color: #64748b; font-size: 0.85rem;">or</span>
+        <span class="ide-badge">
+          <!-- VS Code icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.5 2L7 12l10.5 10 4-2V4l-4-2z" fill="#3b82f6"/>
+            <path d="M7 12L2.5 8 4 6l6 6-6 6-1.5-2L7 12z" fill="#93c5fd"/>
+            <path d="M17.5 2L10 8l-3-2L4 6l13.5-4z" fill="#60a5fa"/>
+            <path d="M17.5 22L10 16l-3 2L4 18l13.5 4z" fill="#60a5fa"/>
+          </svg>
+          GitHub VS Code
+        </span>
+      </div>
+    </header>
+
+    <div class="abstract">
+      <strong>What you'll learn:</strong> This workshop introduces AI agents in the IDE as a new way to interact and partner with AI. We cover strategies for editing prompts in files (including the use of file and folder paths) and how to use a Gen AI agent to process files and generate code. <strong>Who it's for:</strong> Undergraduates in writing-intensive courses or preparing for presentations and closed-book exams; research students working on papers and research.
+    </div>
+
+    <section class="speaker-card">
+      <div class="photo-wrap">
+        <img class="photo" src="https://lc.hkbu.edu.hk/main/wp-content/uploads/simon-1.jpg" alt="Dr Simon Wang">
+      </div>
+      <div class="details">
+        <p class="speaker-name">Dr Simon Wang</p>
+        <p>Lecturer and Innovation Officer, the Language Centre, HKBU</p>
+        <p class="audience">Open to HKBU and other university students and staff.</p>
+      </div>
+    </section>
+
+    <section class="when-card">
+      <div class="when-item">
+        <span class="icon">📅</span>
+        <div>
+          <label>Date</label>
+          <strong>Friday, 20 February 2026</strong>
+        </div>
+      </div>
+      <div class="when-separator"></div>
+      <div class="when-item">
+        <span class="icon">🕐</span>
+        <div>
+          <label>Time</label>
+          <strong>10:00 am – 12:00 noon</strong>
+        </div>
+      </div>
+    </section>
+
+    <div class="ccl-container">
+      <div class="ccl-badge">
+        <span>✓</span> Earn CCL Credits!
+      </div>
+    </div>
+
+    <div class="sponsor-bar">
+      <img src="../assets/editPoster/1770811458146.png" alt="Trae logo">
+      <span>Sponsorship by</span>
+      <span class="sponsor-name">Trae</span>
+      <span class="tbc">(to be confirmed)</span>
+    </div>
+
+    <footer class="cta-section">
+      <a href="https://forms.office.com/r/tB9HqyGmuH" target="_blank" rel="noopener" class="register-btn">
+        Register Now <span>→</span>
+      </a>
+      <div class="qr-container">
+        <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fforms.office.com%2Fr%2FtB9HqyGmuH" alt="QR code for registration" width="100" height="100">
+        <span>Scan to register</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

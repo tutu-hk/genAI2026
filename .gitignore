@@ -10,3 +10,9 @@ vite.config.ts.*
 
 # Local API keys (not committed; remains on disk for local AI agent)
 AmbassadorProgramme/LLM/poeKey.md
+
+# Ollama macOS app binaries (large; keep locally, don't track in git)
+Ollama/
+Ollama-darwin.zip
+courses/gcap3226/week5/chatbots/ollama-macos-offline.zip
+courses/gcap3226/week5/chatbots/ollama-macos-offline/

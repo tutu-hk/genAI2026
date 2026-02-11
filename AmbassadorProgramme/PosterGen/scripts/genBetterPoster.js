@@ -9,10 +9,10 @@ const fs = require('fs');
 const path = require('path');
 const OpenAI = require('openai').default;
 
-const DIR = __dirname;
+const DIR = path.join(__dirname, '..');
 const KEY_FILE = path.join(DIR, '..', 'LLM', 'poeKey.md');
-const POSTER_HTML = path.join(DIR, 'poster.html');
-const OUT_FILE = path.join(DIR, 'betterPoster.md');
+const POSTER_HTML = path.join(DIR, 'posters', 'poster.html');
+const OUT_FILE = path.join(DIR, 'docs', 'betterPoster.md');
 
 const POE_BASE = 'https://api.poe.com/v1';
 const MODEL = process.env.POE_POSTER_MODEL || 'Nano-Banana-Pro';

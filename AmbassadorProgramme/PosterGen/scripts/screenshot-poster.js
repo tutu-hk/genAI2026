@@ -1,17 +1,14 @@
-/**
- * Screenshot posterBetter.html (improved poster from betterPoster.md) to betterPoster.jpg
- */
 const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
 
 async function main() {
   const dir = __dirname;
-  const htmlPath = path.join(dir, 'posterBetter.html');
-  const outPath = path.join(dir, 'betterPoster.jpg');
+  const htmlPath = path.join(dir, '..', 'posters', 'poster.html');
+  const outPath = path.join(dir, '..', 'output', 'poster.jpg');
 
   if (!fs.existsSync(htmlPath)) {
-    console.error('posterBetter.html not found');
+    console.error('poster.html not found');
     process.exit(1);
   }
 

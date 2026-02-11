@@ -12,11 +12,11 @@ const path = require('path');
 const { execSync } = require('child_process');
 const OpenAI = require('openai').default;
 
-const DIR = __dirname;
+const DIR = path.join(__dirname, '..');
 const KEY_FILE = path.join(DIR, '..', 'LLM', 'poeKey.md');
-const POSTER_HTML = path.join(DIR, 'poster.html');
-const POSTER_BETTER_HTML = path.join(DIR, 'posterBetter.html');
-const BETTER_JPG = path.join(DIR, 'betterPoster.jpg');
+const POSTER_HTML = path.join(DIR, 'posters', 'poster.html');
+const POSTER_BETTER_HTML = path.join(DIR, 'posters', 'posterBetter.html');
+const BETTER_JPG = path.join(DIR, 'output', 'betterPoster.jpg');
 
 const POE_BASE = 'https://api.poe.com/v1';
 const MODEL = process.env.POE_POSTER_MODEL || 'Nano-Banana-Pro';
@@ -103,7 +103,7 @@ Requirements:
   console.log('Written:', POSTER_BETTER_HTML);
 
   console.log('Screenshotting to betterPoster.jpg...');
-  execSync('node screenshot-better.js', { cwd: DIR, stdio: 'inherit' });
+  execSync('node screenshot-better.js', { cwd: path.join(DIR, 'scripts'), stdio: 'inherit' });
   console.log('Done:', BETTER_JPG);
 }
 
