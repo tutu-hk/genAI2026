@@ -7,7 +7,7 @@ Creating Awareness to Prevent Sexual Harassment Effectively in Our Community
 This project focuses on raising public awareness about sexual harassment, abuse, and assault in Hong Kong, examining current education programs, legal frameworks, and support systems for victims.
 
 ## Google Doc
-- **Public Info Curation**: [Link](https://docs.google.com/document/d/1ErJCcdg5mCW1zh8WIMjSNb7Vz5pamHhl/edit)
+- **Public Info Curation**: [Link](https://docs.google.com/document/d/1ugzSlI0w1_MEwWELp8U0TaOHPa4ojFjYrLmI7jFZ9eI/edit?usp=sharing)
 
 ---
 

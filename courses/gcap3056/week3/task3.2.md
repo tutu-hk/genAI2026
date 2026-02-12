@@ -34,7 +34,7 @@ Search for publicly available information about your group's topic:
 | 2 | Fire Service (Learning from the Past) | [Link](https://docs.google.com/document/d/1n3a_qLQHx7iNMYk5KR4-0v5rFqml2l_B9IhbS7Cvgi4/edit) |
 | 3 | Government App | [Link](https://docs.google.com/document/d/1KGVQgq9TGn2cfWGNVM8qWCV-zl71WG7ZKU44c7MviFI/edit) |
 | 4 | Fire Service (Open-ended) | [Link](https://docs.google.com/document/d/1KHJv5TiUSB4fDAt5UniQZEVI0QuWQI3GghQI6EW5rZc/edit) |
-| 5 | Prevent Sexual Harassment | [Link](https://docs.google.com/document/d/1ErJCcdg5mCW1zh8WIMjSNb7Vz5pamHhl/edit) |
+| 5 | Prevent Sexual Harassment | [Link](https://docs.google.com/document/d/1ugzSlI0w1_MEwWELp8U0TaOHPa4ojFjYrLmI7jFZ9eI/edit?usp=sharing) |
 | 6 | Rare Disease (Solo) | [Link](https://docs.google.com/document/d/1IplYThZIHmhCy0a8tcycNCAmia80iBRFTGT8La2ZUoU/edit) |
 
 ### Step 2: Document Each Source
