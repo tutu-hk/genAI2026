@@ -1,0 +1,129 @@
+# Process Log — Group 5: Prevent Sexual Harassment
+
+**Project:** Group 5 — Prevent Sexual Harassment  
+**Last updated:** 12 February 2026
+
+---
+
+## 12 February 2026 — Major data gathering and analysis session
+
+### What was done (AI agent, directed by teacher)
+
+**Task 1: TALK Hong Kong CSA Report → Markdown**
+- Fetched the 44-page PDF: "Magnitude of Child Sexual Abuse in Hong Kong: Review of Evidence 2015-2024" by Taura Edgar, TALK Hong Kong (Dec 2025)
+- Converted to structured markdown: `TALK_CSA_Report.md`
+- Key findings extracted: 16% estimated CSA prevalence, 0.05% official reporting rate (vs 8% global), 96% unreported cases, 86% female victims, 93% male perpetrators
+- Added project relevance section linking TALK data to Group 5 hypotheses
+
+**Task 2: Google Doc → GoogleNotes.md**
+- Fetched all content from the team's Google Doc (https://docs.google.com/document/d/1ugzSlI0w1_MEwWELp8U0TaOHPa4ojFjYrLmI7jFZ9eI/)
+- Multiple tabs documented: Week 3 (public info curation), Week 4 (progress), Week 5 (government requests), Tasks 3-4, Government Questions (Joyce & Kenneth), Document Hypothesis, Reflective Journal Info, LegCo Report Draft
+- Created: `GoogleNotes.md` dated 12 February 2026
+
+**Task 3: DataGap.md — Data Access Gap Report**
+- Created comprehensive report documenting 8 specific data gaps:
+  1. No centralised CSA dataset
+  2. No prevalence research
+  3. No disclosure barrier research
+  4. No technology-facilitated abuse tracking
+  5. No education programme evaluation
+  6. Inconsistent legal definitions
+  7. No perpetrator profile data
+  8. No longitudinal outcome data
+- Included evidence from TALK, EOC, SCMP, RainLily, and team research
+- Added recommendations: immediate, short-term, and long-term actions
+
+**Task 4: SCMP Search → SCMPreports.md**
+- Searched scmp.com using 5 targeted queries covering:
+  - Sexual harassment Hong Kong (2024-2026)
+  - Sexual assault law reform and data reporting (2023-2025)
+  - Child sexual abuse prevention and education (2023-2025)
+  - University students and EOC (2023-2025)
+  - Sexual violence victim support and underreporting (2023-2025)
+- Compiled 18 SCMP articles into 7 categories:
+  1. Law Reform (3 articles)
+  2. Workplace Sexual Harassment (3 articles)
+  3. Sexual Violence Data and Reporting (3 articles)
+  4. Child Protection and Mandatory Reporting (2 articles)
+  5. Education and Sex Education (3 articles)
+  6. University Sexual Harassment (3 articles)
+  7. Image-Based Sexual Violence (1 article)
+- Created summary table and key themes analysis
+- Created: `SCMPreports.md`
+
+**Task 5: Updated DataGap.md**
+- DataGap.md was created with SCMP findings already integrated (tasks 3 and 4 done in parallel)
+
+**Task 6: outlineDraft01.md — Narrowed Focus Outline**
+- Created updated report outline (v2) building on original `outlineDraft.md`
+- **Narrowed focus:** The Data Access Gap — how lack of publicly available, centralised data undermines prevention
+- Proposed title: "Breaking the Silence with Data"
+- Added comparison table showing evolution from v1 to v2
+- 10 time-bound recommendations across 3 time horizons
+- Media investigation angle: "The Numbers That Don't Exist"
+
+**Task 7: govEnquiries.md — Government Questions**
+- Created 23 specific questions across 6 government departments:
+  - EOC: 4 questions (training reach, COMPASS, complaints, survey)
+  - EDB: 4 questions (school compliance, sex education, complaints, teacher training)
+  - DoJ/LRC: 5 questions (reform timeline, consent, persistent abuse, prosecution/sentencing data)
+  - SWD: 4 questions (CSA data, mandatory reporting, neurodiverse, HSB)
+  - Security Bureau: 3 questions (coordination, resources, barring mechanisms)
+  - UGC: 3 questions (mandatory training, institutional data, funding)
+- Each section includes anticipated responses and follow-up strategies
+- Referenced Code on Access to Information (COAI) framework
+- Incorporated questions from team members (Joyce and Kenneth from Google Doc)
+
+**Task 8: Process Log**
+- Created this `process.log` documenting all work done
+
+### Files created (12 Feb 2026)
+| File | Purpose |
+|------|---------|
+| `TALK_CSA_Report.md` | Markdown conversion of TALK Hong Kong's 44-page CSA report |
+| `GoogleNotes.md` | All content from team's Google Doc (multiple tabs) |
+| `DataGap.md` | Comprehensive data gap analysis (8 gaps, 10 recommendations) |
+| `SCMPreports.md` | 18 SCMP articles compiled with titles, dates, summaries, links |
+| `outlineDraft01.md` | Updated report outline with narrowed focus on data access gap |
+| `govEnquiries.md` | 23 government questions across 6 departments |
+| `process.log` | This work log |
+
+### Key data points discovered
+- CSA prevalence: 16% of HK population (TALK 2025)
+- Official CSA reporting rate: 0.05% (vs 8% global)
+- Unreported cases: up to 96%
+- University harassment: 23%, but <3% complain (EOC 2018)
+- Workplace harassment: 34% of women (2025)
+- Sexual assault reaching police: 41.4%; conviction: ~6%
+- Only ~3,200 university students trained by EOC (2023)
+- Sex education materials criticised as "unprofessional" and lacking consent education
+- Voyeurism up 24% in 2024; image-based abuse growing
+- Mandatory Reporting Ordinance effective January 2026
+- Law reform legislation expected by 2027
+
+---
+
+## Previous work (before 12 Feb 2026)
+
+### Files that existed before this session
+| File | Content |
+|------|---------|
+| `public-info.md` | Overview, direction, key sources, team members |
+| `WebSearchReport.md` | 5 rounds of web search (EOC, law reform, RainLily, workplace/school, gov.hk) |
+| `outlineDraft.md` | First draft report outline |
+| `Followup5Feb.md` | Action items from 5 Feb: map government agencies, identify gaps |
+| `planNextSteps.md` | Plan for reaching group6-rare-disease level of progress |
+| `seekFeedback.md` | Feedback request |
+| `update12Feb.md` | Task list for 12 Feb session |
+
+---
+
+## What's next
+
+1. **Team review:** Kenneth and Joyce review all new files, especially `outlineDraft01.md` and `govEnquiries.md`
+2. **Send COAI requests:** Draft formal letters to EOC, EDB, DoJ, SWD, Security Bureau, UGC
+3. **Track responses:** Document government replies in new files
+4. **Update DataGap.md:** Incorporate government responses
+5. **Refine hypothesis:** Based on new evidence, refine the team's hypothesis
+6. **Reflective journals:** Use process as material for reflective learning journal entries
+7. **Prepare media angle:** Develop the "data blindspot" story angle for the report
